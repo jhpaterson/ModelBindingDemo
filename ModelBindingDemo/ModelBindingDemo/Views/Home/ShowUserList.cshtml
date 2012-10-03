@@ -1,0 +1,15 @@
+﻿@using ModelBindingDemo.Models
+@model List<User>
+
+@{
+    ViewBag.Title = "ShowUserList";
+}
+
+<h2>ShowUserList</h2>
+<h3>The following data would be saved:</h3>
+@foreach (User user in Model)
+{
+    <p>@user.FirstName @user.LastName</p>
+}
+ 
+

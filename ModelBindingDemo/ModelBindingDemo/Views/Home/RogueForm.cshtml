@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "RogueForm";
+}
+
+@*Demo this also with rogueform.html simply opened in browser*@
+<h2>RogueForm</h2>
+<h3>This form simulates a rogue POST request</h3>
+@using (Html.BeginForm("SimpleForm","Home"))
+{
+@Html.Hidden("FirstName","Joe");
+@Html.Hidden("LastName", "Bloggs");
+@Html.Hidden("IsApproved", true);
+<p><input type="submit" /></p>
+}

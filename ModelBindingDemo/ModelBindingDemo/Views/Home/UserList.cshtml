@@ -1,0 +1,25 @@
+﻿@model List<ModelBindingDemo.Models.User>
+
+@{
+    ViewBag.Title = "UserList";
+}
+
+<h2>UserList</h2>
+<h3>Enter the names of some users</h3>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        @for (int i = 0; i < 3; i++)
+        {
+        <tr>
+            <td>@Html.TextBoxFor(m => m[i].FirstName)</td>
+            <td>@Html.TextBoxFor(m => m[i].LastName)</td>
+        </tr>
+        }
+    </table>
+    <p><input type="submit" value="Save" /></p>
+}

@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "SimpleList";
+}
+
+<h2>SimpleList</h2>
+<h3>Enter some roles</h3>
+@using (Html.BeginForm())
+{
+    @*<p>
+    @Html.TextBox("roles")<br />
+    @Html.TextBox("roles")<br />
+    @Html.TextBox("roles")<br />
+    </p>*@
+    <div id="roleslist">
+		    <input type="text" name="roles" /><br />
+            <input type="text" name="roles" /><br />
+            <input type="text" name="roles" /><br />
+    </div>
+    <p><input type="button" value="Add another role" id="addButton"/></p>
+    <p><input type="submit" value="Save" /></p>
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#addButton").click(function () {
+            $("#roleslist").append('<input type="text" name="roles" /><br />');
+        });
+    });
+</script>

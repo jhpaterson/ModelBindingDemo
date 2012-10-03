@@ -1,0 +1,20 @@
+﻿@model ModelBindingDemo.Models.User
+
+@{
+    ViewBag.Title = "UpdateForm";
+}
+
+<h2>UpdateForm</h2>
+@using (Html.BeginForm())
+{
+    <p>@Html.LabelFor(m => m.FirstName) 
+       @Html.EditorFor(m => m.FirstName)
+    </p>
+    <p>@Html.LabelFor(m => m.LastName) 
+       @Html.EditorFor(m => m.LastName)
+    </p>
+    <p>@Html.LabelFor(m => m.IsApproved) 
+       @Html.EditorFor(m => m.IsApproved)
+    </p>
+    <p><input type="submit" value="Save" /></p>
+}
