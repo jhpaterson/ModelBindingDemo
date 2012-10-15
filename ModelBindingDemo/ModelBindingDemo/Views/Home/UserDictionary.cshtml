@@ -1,0 +1,26 @@
+﻿@model Dictionary<string, ModelBindingDemo.Models.User>
+
+@{
+    ViewBag.Title = "UserDictionary";
+}
+
+<h2>UserDictionary</h2>
+<h3>Enter the names of some users</h3>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        @for (int i = 0; i < 3; i++)
+        {
+        <tr>
+            <td><input type="hidden" name="[@i].key" value="user@(i)"/>
+            @Html.TextBox("[" + i + "].value.FirstName")</td>
+            <td>@Html.TextBox("[" + i + "].value.LastName")</td>
+        </tr>
+        }
+    </table>
+    <p><input type="submit" value="Save" /></p>
+}

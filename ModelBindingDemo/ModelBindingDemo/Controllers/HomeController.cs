@@ -26,7 +26,7 @@ namespace ModelBindingDemo.Controllers
 
         [HttpPost]
         public ActionResult SimpleForm(
-            /*[Bind(Exclude="IsApproved")]*/ User user)
+            [Bind(Exclude="IsApproved")] User user)
         {
             return View("ShowUser", user);
         }
@@ -71,6 +71,18 @@ namespace ModelBindingDemo.Controllers
         public ActionResult UserList(List<User> users)
         {
             return View("ShowUserList", users);
+        }
+
+        [HttpGet]
+        public ActionResult UserDictionary()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult UserDictionary(Dictionary<string, User> users)
+        {
+            return View("ShowUserDictionary", users);
         }
 
         [HttpGet]

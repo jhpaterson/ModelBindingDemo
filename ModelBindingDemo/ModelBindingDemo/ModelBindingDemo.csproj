@@ -81,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Home\ShowUserList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Home\UserList.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -155,16 +161,16 @@
     <Content Include="Views\Home\ShowList.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\UserList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\ShowUserList.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\ComplexList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\UpdateForm.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\ShowUserDictionary.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\UserDictionary.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

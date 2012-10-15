@@ -1,0 +1,15 @@
+﻿@using ModelBindingDemo.Models
+@model Dictionary<string, User>
+
+@{
+    ViewBag.Title = "ShowUserDictionary";
+}
+
+<h2>ShowUserDictionary</h2>
+<h3>The following data would be saved:</h3>
+@foreach (KeyValuePair<string, User> item in Model)
+{
+    <p>@item.Key: @item.Value.FirstName @item.Value.LastName</p>
+}
+ 
+
